@@ -1,47 +1,48 @@
+
 import { StyleSheet, ScrollView, View, Text, TouchableOpacity } from 'react-native';
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#F5F5F5',
-    padding: 20,
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 20,
-    color: '#333',
-    textAlign: 'center',
-  },
-  scrollContainer: {
-    flex: 1,
-  },
-  item: {
-    backgroundColor: '#fff',
-    padding: 15,
-    borderRadius: 10,
-    marginBottom: 10,
-    borderWidth: 1,
-    borderColor: '#ddd',
-  },
-  itemText: {
-    fontSize: 16,
-    color: '#333',
-  },
-  button: {
-    backgroundColor: '#007bff',
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    borderRadius: 5,
-    alignItems: 'center',
-  },
-  buttonText: {
-    color: '#fff',
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
-});
-
+    container: {
+      flex: 1,
+      backgroundColor: '#F5F5F5',
+      padding: 20,
+    },
+    title: {
+      fontSize: 24,
+      fontWeight: 'bold',
+      marginBottom: 20,
+      color: '#333',
+      textAlign: 'center',
+    },
+    scrollContainer: {
+      flex: 1,
+    },
+    item: {
+      backgroundColor: '#fff',
+      padding: 15,
+      borderRadius: 10,
+      marginBottom: 10,
+      borderWidth: 1,
+      borderColor: '#ddd',
+    },
+    itemText: {
+      fontSize: 16,
+      color: '#333',
+    },
+    button: {
+      backgroundColor: '#007bff',
+      paddingVertical: 10,
+      paddingHorizontal: 20,
+      borderRadius: 5,
+      alignItems: 'center',
+    },
+    buttonText: {
+      color: '#fff',
+      fontSize: 16,
+      fontWeight: 'bold',
+    },
+  });
+  
 
 export default function ScrollScreen({ navigation }) {
   return (
@@ -63,6 +64,4 @@ export default function ScrollScreen({ navigation }) {
     </View>
   );
 }
-
-
 
