@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
 });
 
 
-export default function ScrollScreen({ navigation }) {
+export default function ScrollScreen({ navigation }:any) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Tela com ScrollView</Text>

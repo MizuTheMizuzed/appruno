@@ -1,7 +1,7 @@
 
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 
-export default function DetailsScreen({ navigation, route }) {
+export default function DetailsScreen({ navigation, route }:any) {
   const { item } = route.params || {};
 
   const styles = StyleSheet.create({
@@ -53,10 +53,10 @@ export default function DetailsScreen({ navigation, route }) {
     <View style={styles.container}>
       <Text style={styles.title}>Detalhes do Item</Text>
       {item ? (
-        <>
+        <View>
           <Text style={styles.itemTitle}>{item.title}</Text>
           <Text style={styles.itemDescription}>{item.description}</Text>
-        </>
+        </View>
       ) : (
         <Text style={styles.message}>Nenhum item selecionado</Text>
       )}
