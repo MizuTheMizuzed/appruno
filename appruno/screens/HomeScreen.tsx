@@ -8,7 +8,7 @@ export default function HomeScreen({ navigation }:any) {
   const [localTasks, setLocalTasks] = useState([]);
   const [apiTasks, setApiTasks] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     setIsLoading(true);
@@ -24,7 +24,7 @@ export default function HomeScreen({ navigation }:any) {
   }, []);
 
   const addTask = ({ title, description }:any) => {
-    setLocalTasks((prev:any) => [
+    setLocalTasks((prev):any => [
       ...prev,
       { id: Date.now().toString(), title, description: description || '', completed: false },
     ]);
@@ -39,7 +39,7 @@ export default function HomeScreen({ navigation }:any) {
   };
 
   const allTasks = [...apiTasks, ...localTasks];
-
+[]
   const renderItem = ({ item }:any) => {
     const isLocal = typeof item.id === 'string';
 
@@ -47,7 +47,7 @@ export default function HomeScreen({ navigation }:any) {
         <View style={styles.container}>
           <Text style={styles.title}>Minhas Tarefas</Text>
           <Text style={styles.counterText}>
-            Tarefas: {allTasks.length} | Concluídas: {allTasks.filter((task) => task.completed).length}
+            Tarefas: {allTasks.length} | Concluídas: {allTasks.filter((task:any) => task.completed).length}
           </Text>
       
           {isLoading ? (
@@ -60,7 +60,7 @@ export default function HomeScreen({ navigation }:any) {
             <FlatList
               data={allTasks}
               renderItem={renderItem}
-              keyExtractor={(item) => item.id.toString()}
+              keyExtractor={(item:any) => item.id.toString()}
               style={styles.list}
               ItemSeparatorComponent={() => <View style={styles.separator} />}
             />
